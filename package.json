@@ -1,0 +1,20 @@
+{
+  "name": "parcel-plugin-jsy",
+  "version": "0.0.0",
+  "description": "Parcel JSY syntax transpiler to standard JavaScript — without Babel",
+  "license": "MIT",
+  "author": "Shane Holloway",
+  "homepage": "https://github.com/jsy-lang/parcel-plugin-jsy#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsy-lang/parcel-plugin-jsy.git"
+  },
+  "module": "jsy_parcel_xform.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "parcel-plugin-jsy": "file:.",
+    "jsy-transpile": "^0.5.10"
+  },
+  "scripts": {}
+}
