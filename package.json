@@ -1,20 +1,49 @@
 {
-  "name": "parcel-plugin-jsy",
+  "name": "parcel-transformer-jsy",
   "version": "0.0.0",
-  "description": "Parcel JSY syntax transpiler to standard JavaScript — without Babel",
+  "description": "Parcel 2.x JSY syntax transpiler to standard JavaScript — without Babel",
   "license": "MIT",
   "author": "Shane Holloway",
-  "homepage": "https://github.com/jsy-lang/parcel-plugin-jsy#readme",
+  "homepage": "https://github.com/jsy-lang/parcel-transformer-jsy#readme",
+  "keywords": [
+    "parcel",
+    "parcel-transformer",
+    "parcel-plugin",
+    "JSY"
+  ],
+  "files": [
+    "cjs",
+    "code",
+    "esm"
+  ],
+  "engines": {
+    "node": ">= 10.0.0",
+    "parcel": "2.0.0-alpha.2.1"
+  },
+  "source": "code/jsy_parcel_xform.js",
+  "main": "cjs/jsy_parcel_xform.js",
+  "module": "esm/jsy_parcel_xform.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jsy-lang/parcel-plugin-jsy.git"
+    "url": "git+https://github.com/jsy-lang/parcel-transformer-jsy.git"
   },
-  "module": "jsy_parcel_xform.js",
   "dependencies": {
+    "@parcel/plugin": "^2.0.0-alpha.2.1",
+    "@parcel/source-map": "^2.0.0-alpha.2.1",
+    "@parcel/utils": "^2.0.0-alpha.2.1"
   },
   "devDependencies": {
-    "parcel-plugin-jsy": "file:.",
-    "jsy-transpile": "^0.5.10"
+    "jsy-transpile": "^0.5.10",
+    "rollup": "^1.27.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
   },
-  "scripts": {}
+  "scripts": {
+    "clean": "rm -rf cjs/ esm/",
+    "build": "rollup --config",
+    "watch": "npm -s run build -- --watch",
+    "prepublish": "npm -s run test",
+    "pretest": "npm -s run build",
+    "test": "echo 'TODO'"
+  }
 }

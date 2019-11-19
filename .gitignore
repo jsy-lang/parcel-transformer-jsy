@@ -1,0 +1,7 @@
+cjs/
+esm/
+umd/
+.parcel-cache/
+node-modules/
+demo/package-lock.json
+demo/dist

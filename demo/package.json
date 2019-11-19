@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel": "^2.0.0-alpha.2.1",
+    "parcel-transformer-jsy": "file:.."
+  },
+  "scripts": {
+    "build": "parcel build index.html",
+    "serve": "parcel serve index.html",
+    "start": "npm -s run serve"
+  }
+}
