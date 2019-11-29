@@ -10,20 +10,21 @@ try { jsy_transpile = require('jsy-transpile') } catch (err) {}
 export default new Transformer({
   async transform({asset, options}) {
     let source = relativeUrl(options.projectRoot, asset.filePath)
-    let src_map
 
     asset.type = 'js'
+
     try {
+      let src_map = options.sourceMaps ? new SourceMap() : null
+
       const res = jsy_transpile(await asset.getCode(), {
         addSourceMapping(arg) {
-          if (!options.sourceMaps) return;
+          if (null === src_map) return;
           arg.source = source
-          src_map = arg
-        },
-      })
+          src_map.addMapping(arg)
+        }, })
 
-      if (undefined !== src_map)
-        asset.setMap(new SourceMap(src_map))
+      if (null !== src_map)
+        asset.setMap(src_map)
 
       asset.setCode(res)
       return [asset]

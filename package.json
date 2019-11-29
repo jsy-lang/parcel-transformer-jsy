@@ -1,6 +1,6 @@
 {
   "name": "parcel-transformer-jsy",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Parcel 2.x JSY syntax transpiler to standard JavaScript — without Babel",
   "license": "MIT",
   "author": "Shane Holloway",
@@ -18,7 +18,7 @@
   ],
   "engines": {
     "node": ">= 10.0.0",
-    "parcel": "2.0.0-alpha.2.1"
+    "parcel": ">=2.0.0 || >=2.0.0-alpha.3.2"
   },
   "source": "code/jsy_parcel_xform.js",
   "main": "cjs/jsy_parcel_xform.js",
@@ -28,6 +28,7 @@
     "url": "git+https://github.com/jsy-lang/parcel-transformer-jsy.git"
   },
   "dependencies": {
+    "source-map": "^0.7.3",
     "@parcel/plugin": "^2.0.0-alpha.2.1",
     "@parcel/source-map": "^2.0.0-alpha.2.1",
     "@parcel/utils": "^2.0.0-alpha.2.1"

@@ -4,3 +4,6 @@ Promise
   console.log @
     `Hello from JSY at ${ts.toISOString()} (generated on 2019-11-19T14:39:22.712Z)!`
 
+setTimeout @=> ::
+  console.log @ 'yuppers'
+
