@@ -1,6 +1,6 @@
 {
   "name": "parcel-transformer-jsy",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Parcel 2.x JSY syntax transpiler to standard JavaScript — without Babel",
   "license": "MIT",
   "author": "Shane Holloway",
@@ -33,11 +33,11 @@
     "@parcel/utils": "^2.0.0-alpha.2.1"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^11.0.2",
-    "@rollup/plugin-node-resolve": "^7.1.1",
-    "jsy-transpile": "^0.8.1",
-    "rollup": "^1.32.1",
-    "tiny-source-map": "0.0.1"
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "jsy-transpile": "^0.9.5",
+    "rollup": "^2.56.3",
+    "tiny-source-map": "0.8.0"
   },
   "scripts": {
     "clean": "rm -rf cjs/ esm/",
